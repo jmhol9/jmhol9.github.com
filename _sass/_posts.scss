@@ -37,12 +37,24 @@
 .post-meta {
   width: auto;
   font-weight: 300;
+  font-size: .85rem;
   margin: 0;
   padding: .25em 0;
   color: #7a7a7a;
-  font-style: italic;
 }
 
 .related-post-title {
   border-bottom: thin solid #f3f3f3;
+}
+
+.post-header {
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.post-content {
+  p {
+    margin-bottom: .75rem;
+  }
 }
