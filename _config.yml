@@ -1,8 +1,8 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       Jordan Holliday
+email:       jordanholliday@gmail.com
+author:      Jordan Holliday
+description: "My thoughts exactly"
 baseurl:     ""
 url:         "http://pixyll.com"
 date_format: "%b %-d, %Y"
@@ -102,7 +102,7 @@ markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     4
+paginate:     10
 sass:
   compressed: true
 gems:
