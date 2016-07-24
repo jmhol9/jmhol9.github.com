@@ -1,0 +1,27 @@
+---
+layout: post
+title: a/A w3d5
+date: '2016-02-27T10:29:43-05:00'
+tags:
+- app academy
+tumblr_url: http://jordanholliday.com/post/140089579095/aa-w3d5
+---
+<p>Today, we used metaprogramming to write some of Active Record&rsquo;s core functionalities: inserting, retrieving, and updating database entries, and creating associations between classes.</p>
+
+<p>We started by using <code>define_method</code> to make <code>attr_accessor</code>s for all columns of the database table corresponding to any class that inherited from our <code>SQLObject</code> class. (The <code>SQLObject</code> class is where much of the action recounted in this post occurs.)</p>
+
+<p>With the writers and readers in place, we used raw SQL queries wrapped in heredocs to define <code>find</code>, <code>insert</code>, and <code>update</code> methods, which were also heritable from <code>SQLObject</code>. Then we defined <code>where</code> in a <code>Searchable</code> module, which we used to <code>extend</code> our <code>SQLObject</code> class.</p>
+
+<p>With some core query methods in place, we moved onto class associations. The associations <code>belongs_to</code> and <code>has_many</code> each began with their own classes, <code>BelongsToOptions</code> and <code>HasManyOptions</code>. Objects of those classes initialized with (overridable) default instance variable values which conformed to Rails&rsquo; naming conventions for primary keys, foreign keys, and class names.</p>
+
+<p><code>belongs_to</code> and <code>has_many</code> themselves became class methods, which when called with the proper arguments would generate a new association object: either a <code>BelongsToOptions</code> or <code>HasManyOptions</code>, both of which inherited from <code>SQLObject</code>, which meant they got attribute readers and writers for all instance variables.</p>
+
+<p>Then—and this is the fancy part—when calling <code>belongs_to</code> or <code>has_many</code> on a particular class, we could define an association method (e.g., <code>Dish#ingredients</code>) with the proper <code>target_class</code>, <code>foreign_key</code>, and <code>primary_key</code> by <code>send</code>ing those instance methods to the options object we created.</p>
+
+<p>That done, all that was required to complete the association method was sticking the return values into our previously-defined <code>where</code> query, and we could grab the associated object(s) from the database.</p>
+
+<p>For the coup de grâce, we added an <code>assoc_options</code> method to our <code>Associatable</code> module (where these association class methods lived). <code>assoc_options</code> returned a hash of all <code>BelongsToOptions</code> and <code>HasManyOptions</code> created in a given class, which we could query with the desired association method&rsquo;s name.</p>
+
+<p>That hash enabled us to chain the association methods and make a <code>has_one :through</code> class method, which took only three arguments&ndash;the desired association method name, the <code>:through</code> association method, and the <code>:source</code> assocation method&ndash;and used them to define a <code>has_one :through</code> association method for all instances of the class.</p>
+
+<p>Very cool, imo.</p>

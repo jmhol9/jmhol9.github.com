@@ -1,0 +1,47 @@
+---
+layout: post
+title: a/A w2d5
+date: '2016-02-21T21:44:10-05:00'
+tags:
+- app academy
+tumblr_url: http://jordanholliday.com/post/139763236665/aa-w2d5
+---
+<p>Today, we coded a hash data structure. We didn&rsquo;t start from scratch, or anywhere close, but we did start in the <em>direction</em> of scratch and it was interesting to watch it come together.</p>
+
+<p>A hash is a collection of key-value pairs. Frex:</p>
+
+<pre><code>my_hash = {
+  key: "value",
+  key2: "value2"
+  }
+</code></pre>
+
+<p>If you query the hash with a key, it will return the corresponding value:</p>
+
+<pre><code>my_hash[:key2] # =&gt; "value2"
+</code></pre>
+
+<p>Looking up a key inside a hash is very fast because rather than iterating through all elements inside itself until it finds your key, a hash knows exactly (or almost exactly) where to look.</p>
+
+<p>But how does it know? Well in the case of our hashes it worked like this—</p>
+
+<p>We started with a typical Ruby array:</p>
+
+<pre><code>array = [0, 21, nil, 3, 4]
+</code></pre>
+
+<p>That array has five indexes but it could have way more, and no matter how large it grows, looking up the value at a known index is a constant-time operation.</p>
+
+<p>To “hash” a value into an array, we modded it—or divided and took the remainder—by the number of indexes available. 21 “mod” 5 is 1, so we filed 21 in <code>array[1]</code>, as you can see.</p>
+
+<p>That’s straightforward enough for integers, but not so easy for things like words, or other arrays, where modular division wouldn’t apply. For those data types, we devised a basic hashing formula to convert them into numeric values.</p>
+
+<p>Sometimes, different values will hash to the same index. When that happens, you can stick them into a subarray that lives at that index, and traverse it until you find the value you are looking for. But if you add an infinite amount of data, the subarrays will grow infinitely long… not unlike this tumblr post… and the time required to traverse them will grow likewise.</p>
+
+<p>So, two more optimizations:</p>
+
+<p>First, each time the number of items hashed equaled the number of indices in our array, we doubled the length of the array and rehashed everything inside. This limited density at each index.</p>
+
+<p>Second, we replaced the subarrays with linked lists. Each link in the list contained a key-value pair; to look up a key’s value, you start from the first link and traverse till you reached the right pair.</p>
+
+<p>Just like an array, a linked list requires traversal time once there’s more than one item in it. But adding new links is a constant-time operation, since you can just stick them onto the front. And if you wanna delete an item, you don’t have to choose between leaving an empty index or reindexing everything behind it. You simply remove the link from the chain and hook up the links on either side of it. That requires some traversal to find the link in question, but the adjustment is—you guessed it—a constant-time operation.</p>

@@ -4,7 +4,7 @@ email:       jordanholliday@gmail.com
 author:      Jordan Holliday
 description: "My thoughts exactly"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://jordanholliday.com"
 date_format: "%b %-d, %Y"
 
 # Google services
@@ -81,7 +81,7 @@ text:
     hackernews:   'Share on Hacker News'
   post:
     updated:        'Updated'
-    minute_read:    
+    minute_read:
     related_posts:  'Related Posts'
   index:
     coming_soon: 'Coming soon...'

@@ -1,0 +1,13 @@
+---
+layout: post
+title: a/A w5d3
+date: '2016-03-10T06:06:50-05:00'
+tags:
+- app academy
+tumblr_url: http://jordanholliday.com/post/140794502300/aa-w5d3
+---
+<p>Today I started by reviewing the steps I followed yesterday to make Rails Lite… and now I think I understand (roughly) what happens when a Rails app receives an HTTP request. The full writeup is forthcoming—doubtless you’ve been waiting with bated breath—but before that, two thoughts:</p>
+
+<ol><li><p>As with Active Record Lite—our DIY database query library—almost everything about Rails Lite is straightforward and surprisingly simple, once you take the time to look through it and write a big chunk of the code yourself. I’m sure the implementation is extremely clever, and I’m not saying it would occur to <strong>me</strong> to do things this way without a lot of prompting. But, having seen it done, I think I could recreate it.</p></li>
+<li><p>In Ruby (and hence in Rails), everything really is an object. Even the routes are objects! I think my instinct would have been to include the routing details in the Router object itself, perhaps using some a hash with arrays of each route’s parameters. That could work, but it would not be the OOProgrammer’s way.</p></li>
+</ol>

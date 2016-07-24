@@ -1,0 +1,31 @@
+---
+layout: post
+title: a/A w4d3
+date: '2016-03-03T05:59:36-05:00'
+tags:
+- app academy
+tumblr_url: http://jordanholliday.com/post/140383565210/aa-w4d3
+---
+<p>Today, we took our <a href="http://arcane-garden-63294.herokuapp.com/session/new" target="_blank">cat rental site</a> live. You can request to rent a cat, or list your own cat for rental. <em>Caveat emptor</em>, these cats have not been vetted and I make no guarantees as to their quality.</p>
+
+<p>Before that, we implemented login/logout, and used cookies to persist user sessions. Two fun facts w/r/t those things:</p>
+
+<p>First, when you sign up for our cat rental site, you provide a password. For your security, that password is not stored anywhere in our database. Instead, we keep a so-called password digest, which is the result of running the password you actually provides through a hashing algorithm (namely, the Blowfish algorithm, courtesy of Rails&rsquo; BCrypt gem). Then when you try to login, we run the password you enter through Blowfish, and compare the result to our stored password digest. If you&rsquo;ve entered the correct password, they will match.</p>
+
+<p>The interesting part of this is that BCrypt and Blowfish are totally public, and anyone can see what they output for a given password. So if—god forbid—a hacker gets access to our cat rental app database they could see all our hashed passwords. Then, they could use BCrypt to hash commonly-used passwords—such as &ldquo;password&quot;—and search for matches in our password digest column. Even if we had millions of entries, a computer could scan all of them and return the matches in a very short time&hellip; and then the hackers would know exactly who uses &quot;password&rdquo; as their password on our site&hellip; and likely other sites, too.</p>
+
+<p>Except BCrypt cleverly complicates that process. The first characters of each digest are a &ldquo;salt&rdquo;: a random string that that&rsquo;s concatenates with your input password before generating the rest of the digest.</p>
+
+<pre><code>[4] pry(main)&gt; BCrypt::Password.create("password")
+=&gt; "$2a$10$sxBnx8jGUY1dmWDtxdfNG.ttCGYjxM9hSLmK/MSOzFbUj4b3cAiha"
+[5] pry(main)&gt; BCrypt::Password.create("password")
+=&gt; "$2a$10$z8rQV32kx0r2NIU3Q6Oz4.HEgDaM00.mfCbWrH3oxWEvNBqbQIBxG"
+</code></pre>
+
+<p>^^Same input but different salts, so different password digests.^^</p>
+
+<p>This is handy each user whose password is &ldquo;password&rdquo; will have a different salt, and hence a different password digest.</p>
+
+<p>The upshot of this is that an attacker can&rsquo;t simply grab our password column, our hashing algorithm, and find all the matches for common passwords. Instead, they will have to extract the salt from each digest, add it to &ldquo;password,&rdquo; hash that, and <em>then</em> see if the rest of the digest matches. And they&rsquo;d have to repeat that process for any other common password: &ldquo;abc123,&rdquo; &ldquo;hello,&rdquo; and so on. That&rsquo;s still possible but it takes way more time. And the difference might be enough to deter someone from trying.</p>
+
+<p>(I promised two fun facts but that one will have to do for now.)</p>

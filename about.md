@@ -5,4 +5,5 @@ permalink: /about/
 tags: about
 ---
 
-This site uses the [Pixyll](pixyll.com) theme by [John Otander](http://johnotander.com).
+
+**Theme**: [Pixyll](pixyll.com) by [John Otander](http://johnotander.com), gently revised.
