@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(to bottom, #eee, #ccc);
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lato';
+        font-weight: 700;
+      }
+
+      a, button {
+        cursor: pointer;
+      }
+
+      .wrapper {
+        display: flex;
+        max-width: 860px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+      }
+
+      .ptm-sidebar {
+        flex: 1;
+        padding: 0 10px;
+      }
+
+      .ptm-sidebar img {
+        width: 100%;
+      }
+
+      .logo {
+        padding: 20px 0 30px;
+      }
+
+      .mobile-logo {
+        width: 215px;
+        padding-bottom: 20px;
+      }
+
+      .ptm-body {
+        flex: 3;
+        padding: 20px 0;
+      }
+
+      .ptm-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .ptm-meta select {
+        width: 60%;
+      }
+
+      .back-next {
+        width: 120px;
+      }
+
+     .back-next a {
+        text-transform: uppercase;
+        width: 45%;
+        border: 0;
+        background: #E74D3B;
+        padding: 8px 10px;
+        color: white;
+      }
+
+      a.back {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      a.next {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      .ptm-content {
+        padding-left: 20px;
+        border-left: 1px solid gray;
+        font-size: 1.6rem;
+      }
+
+      article.ptm-content h1 {
+        font-size: 3.5rem;
+      }
+
+      article.ptm-content h2 {
+        font-size: 2.5rem;
+      }
+
+      article.ptm-content li {
+        margin-bottom: 5px;
+      }
+
+      .ptm-title {
+        position: relative;
+        margin-bottom: 0;
+        padding-left: 10px;
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: gray;
+        text-transform: uppercase;
+        transform: translateY(-50%);
+      }
+
+      .ptm-title:before {
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        display: block;
+        content: " ";
+        border-top: 1px solid gray;
+        width: 20px;
+      }
+
+      .slide-title {
+        margin-bottom: 0;
+        margin-top: 15px;
+        color: #2E62AE;
+      }
+
+      .slide-subhead {
+        color: #E74D3B;
+      }
+
+      img {
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .right {
+        float: right;
+        padding: 10px 0 10px 10px;
+      }
+
+      /* Responsive styles */
+
+      @media screen and (max-width: 800px) {
+        .ptm-sidebar {
+          display: none;
+        }
+
+        .ptm-content {
+          padding-left: 10px;
+        }
+
+        .ptm-title:before {
+          width: 10px;
+        }
+
+        .wrapper {
+          padding: 10px;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        .mobile-logo {
+          display: none;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="ptm-sidebar">
+        <div class="logo">
+          <img src="/images/techscholar/techscholar-logo.png" alt="sidebar image">
+        </div>
+        <img src="/images/techscholar/sidebar-05.png" alt="sidebar image">
+      </section>
+      <section class="ptm-body">
+        <div class="mobile-logo">
+          <img src="/images/techscholar/techscholar-logo.png" alt="sidebar image">
+        </div>
+        <nav class="ptm-meta">
+          <select name="ptm-nav-select" onchange="javascript:gotoURL(this)">
+            <option value="">Page 1</option>
+            <option value="http://google.com">Page 2</option>
+            <option value="3">Page 3</option>
+          </select>
+
+          <div class="back-next">
+            <a class="back">< Back</a>
+            <a class="next">Next ></a>
+          </div>
+        </nav>
+        <article class="ptm-content">
+          <header>
+            <h5 class="ptm-title">PTM Title</h5>
+            <h1 class="slide-title">Slide Title Goes Here</h1>
+            <h2 class="slide-subhead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum possimus autem sint neque quos dignissimos recusandae.</h2>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos laboriosam maxime ipsam quis dicta omnis, laudantium ratione optio sequi saepe necessitatibus perspiciatis.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum sed, quas eaque quod iste. Quas quasi corporis, quisquam libero est, nulla, illum minus, quam eveniet neque nostrum incidunt laboriosam.</li>
+            <li>Enim unde molestias doloremque error ullam placeat quibusdam praesentium asperiores dolores, aut, aliquam esse eos hic, quia ea itaque amet nemo voluptates quisquam accusantium. Illo sed iure et ab nesciunt.</li>
+            <li>Minima repellendus mollitia voluptatum nemo asperiores odit deleniti doloremque dolores explicabo eveniet quod ab quibusdam sed rerum earum, eum optio et, esse dicta quas magnam unde id dolorem facere ullam.</li>
+            <li>Asperiores, dolorem, eos. Blanditiis, optio consectetur facere dolorem vitae quibusdam maiores cumque magni nulla voluptatum officiis officia alias excepturi repudiandae odio nemo reprehenderit perferendis? Dignissimos ut consequatur aliquid non ab.</li>
+            <li>Dignissimos possimus ea consequatur quasi quibusdam magni voluptatibus, voluptatem dolor optio expedita praesentium ipsa nam molestias sit. Vel, dicta deserunt accusantium eveniet, non, suscipit blanditiis tenetur, cupiditate illum obcaecati saepe!</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
