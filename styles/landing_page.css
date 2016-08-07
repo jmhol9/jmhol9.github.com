@@ -1,0 +1,95 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background: #fff;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+h4, h5, h6 {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  background: #fff;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  min-height: 420px;
+  background-image: url("/images/techscholar/hero-working-laptop.jpg");
+  background-size: cover;
+  padding: 40px;
+  color: #fff;
+}
+
+.form-overlay {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);;
+  border-radius: 4px;
+  width: 60%;
+  max-width: 480px;
+}
+
+.form-overlay input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  border-radius: 4px;
+  border: none;
+  font-size: 2.4rem;
+}
+
+.form-overlay button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-image: linear-gradient(to bottom, #ffa13f, #f98a17);
+  color: #fff;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+.form-overlay .micetype {
+  margin: 0 auto;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
