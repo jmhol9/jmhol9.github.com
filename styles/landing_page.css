@@ -38,14 +38,40 @@ button {
   padding: 0 20px;
 }
 
+.wrapper-960 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .wrapper.flex {
   display: flex;
   justify-content: space-between;
 }
 
+.wrapper.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar {
   background: #fff;
   padding: 20px 0;
+}
+
+.navbar a {
+  color: rgb(91, 91, 91);
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.navbar a:hover {
+  color: rgb(80, 153, 222);
 }
 
 .logo {
@@ -61,6 +87,32 @@ button {
   background-size: cover;
   padding: 40px;
   color: #fff;
+}
+
+.hero-double {
+  min-height: 420px;
+  background-image: url("/images/techscholar/hero-working-laptop.jpg");
+  background-size: cover;
+  padding: 40px;
+  color: #fff;
+}
+
+.hero-copy-left {
+  max-width: 620px;
+  margin-rigth: 40px;
+}
+
+.hero-copy-left h1 {
+  max-width: 420px;
+  font-size: 4.8rem;
+  font-weight: 900;
+}
+
+.hero-copy-left p,
+.hero-copy-left ul,
+.hero-copy-left li {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }
 
 .form-overlay {
@@ -138,7 +190,7 @@ button {
 .heading h4 {
   margin-bottom: 10px;
   text-align: center;
-  color: #EC4847;
+  color: rgb(80, 153, 222);
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 500;
@@ -147,6 +199,7 @@ button {
 
 .columns-3 {
   display: flex;
+  padding-top: 20px;
   padding-bottom: 40px;
   justify-content: center;
   margin: 0 auto;
@@ -240,7 +293,7 @@ button {
 .bottom-cta {
   display: flex;
   justify-content: center;
-  padding: 50px 40px;
+  padding: 60px 40px;
 }
 
 .bottom-cta .form-overlay {
@@ -266,6 +319,30 @@ footer {
   padding: 20px;
   background-color: rgb(48, 48, 48);
   color: #fff;
-  font-size: 1.4rem;
-  text-align: center;
+  font-size: 1.5rem;
+}
+
+footer a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+/* HOVER EFFECTS */
+
+.form-overlay button.cta-button {
+  transition: box-shadow, background;
+  transition-duration: .3s;
+}
+
+.form-overlay button.cta-button:hover {
+  box-shadow: 0 0 0 3px rgba(255, 155, 2, 0.7);
 }
