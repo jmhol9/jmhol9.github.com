@@ -19,10 +19,16 @@
           <img src="/images/techscholar/techscholar-logo.png" alt="sidebar image">
         </div>
         <nav class="ptm-meta">
-          <select name="ptm-nav-select" onchange="javascript:gotoURL(this)">
-            <option value="">Page 1</option>
-            <option value="http://google.com">Page 2</option>
-            <option value="3">Page 3</option>
+          <select name="ptm-nav-select" onchange="javascript:techScholarDemo.goToUrl(this.value)">
+            <option value="/demo-ptm-p1" selected>Page 1</option>
+            <option value="/demo-ptm-p2">Page 2</option>
+            <option value="/demo-ptm-p3">Page 3</option>
+            <option value="/demo-ptm-p4">Page 4</option>
+            <option value="/demo-ptm-p5">Page 5</option>
+            <option value="/demo-ptm-p6">Page 6</option>
+            <option value="/demo-ptm-p7">Page 7</option>
+            <option value="/demo-ptm-p8">Page 8</option>
+            <option value="/demo-ptm-p9">Page 9</option>
           </select>
           <div class="back-next">
             <a class="back">< Back</a>
@@ -44,5 +50,12 @@
         </article>
       </section>
     </div>
+    <script>
+      this.techScholarDemo = {
+         goToUrl: function (url) {
+          location.assign(url);
+        }
+      }
+    </script>
   </body>
 </html>

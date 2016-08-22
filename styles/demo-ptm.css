@@ -149,6 +149,24 @@ img {
   padding: 10px 0 10px 10px;
 }
 
+.center {
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+}
+
+.max-550 {
+  max-width: 550px;
+}
+
+.max-320 {
+  max-width: 320px;
+}
+
+.max-33 {
+  max-width: 33%;
+}
+
 /* Responsive styles */
 
 @media screen and (max-width: 800px) {
