@@ -102,10 +102,30 @@ button {
   margin-rigth: 40px;
 }
 
+.hero-copy-left.two-col {
+  max-width: 480px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.35);
+}
+
 .hero-copy-left h1 {
   max-width: 420px;
   font-size: 4.8rem;
   font-weight: 900;
+}
+
+.hero-copy-left.two-col h1 {
+  margin-bottom: 0;
+}
+
+.hero-copy-left.two-col li {
+  margin-bottom: 10px;
+}
+
+.hero-copy-left.two-col ul,
+.hero-copy-left.two-col li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .hero-copy-left p,
@@ -115,12 +135,22 @@ button {
   line-height: 2.6rem;
 }
 
+.inline-checkmark {
+  height: 15px;
+  width: auto;
+  padding-right: 10px;
+}
+
 .form-overlay {
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.6);;
   border-radius: 4px;
   width: 60%;
   max-width: 400px;
+}
+
+.form-overlay.one-col {
+  max-width: 320px;
 }
 
 .form-overlay input {
