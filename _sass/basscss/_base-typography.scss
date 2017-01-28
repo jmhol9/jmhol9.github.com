@@ -24,8 +24,14 @@ dl,
 ol,
 ul {
   font-size: $base-font-size;
+  font-weight: $body-font-weight;
   margin-top: 0;
   margin-bottom: $space-2;
+}
+
+em,
+b {
+  font-weight: $bold-body-font-weight;
 }
 
 ol,
