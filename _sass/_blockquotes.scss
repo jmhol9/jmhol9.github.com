@@ -5,6 +5,14 @@ blockquote {
   padding: $space-1;
 }
 
+blockquote.twitter-embed {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  border-left: none;
+}
+
 blockquote footer {
   background-color: #fff;
   border-color: transparent;
