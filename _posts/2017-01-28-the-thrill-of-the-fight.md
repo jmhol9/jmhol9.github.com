@@ -3,7 +3,7 @@ layout: post
 title: 'The Thrill of the Fight'
 date: '2017-01-28'
 ---
-Why are liberals fighting about refugees? Accepting refugees from countries like Syria, Iraq, and Yemen is not popular.* There are better ways to help people in those countries. A sane left, whose goal was not opposing President Trump but rather advancing its values, would not waste time trying to convince America that importing Syrians serves the national interest.
+Why are liberals fighting Trump on refugees? Accepting refugees from countries like Syria, Iraq, and Yemen is not popular.* There are better ways to help people in those countries. A sane left, whose goal was not opposing President Trump but rather advancing its values, would not waste time trying to convince America that importing Syrians serves the national interest.
 
 But the point is not to advance liberal values. It is to stoke outrage and obstruct the President at every turn. (When the right took a similar tack during the previous administration, it was less disruptive because conservatives are less prone to marching in the streets and don’t control the mainstream media.)
 
