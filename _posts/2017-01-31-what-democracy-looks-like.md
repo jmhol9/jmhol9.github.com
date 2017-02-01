@@ -11,4 +11,4 @@ As first reported in my last post:
 
 The premise of republican democracy is that at some point, policy yields to the will of the people. Delay that point far enough, and you get a correction like the one Trump is now presiding over. It’s interesting to note how the American left believes in majority rule when it comes to Presidential elections, but is endlessly contemptuous of public opinion on issues like immigration.
 
-Anyway, my final thought on the matter is this. If you were asked to devise a policy that encapsulates the callous arrogance and obliviousness of American liberalism circa January 2017, you couldn’t do any better than angrily insisting that Yemenis and Somalis and Libyans *must be* resettled in Wisconsin.
+Anyway, my final thought on the matter is this. If you were asked to devise a policy position that encapsulates the callous arrogance and obliviousness of American liberalism circa January 2017, you couldn’t do any better than angrily insisting that Yemenis and Somalis and Libyans *must be* resettled in Wisconsin.
