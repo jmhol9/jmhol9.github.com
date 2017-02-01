@@ -5,7 +5,7 @@ date: '2017-01-31'
 ---
 As first reported in my last post:
 
->> A new [Rasmussen Reports](http://www.rasmussenreports.com/public_content/politics/current_events/immigration/january_2017/most_support_temporary_ban_on_newcomers_from_terrorist_havens) national telephone and online survey finds that 57% of Likely U.S. Voters favor a temporary ban on refugees from Syria, Iraq, Iran, Libya, Somalia, Sudan and Yemen…
+> A new [Rasmussen Reports](http://www.rasmussenreports.com/public_content/politics/current_events/immigration/january_2017/most_support_temporary_ban_on_newcomers_from_terrorist_havens) national telephone and online survey finds that 57% of Likely U.S. Voters favor a temporary ban on refugees from Syria, Iraq, Iran, Libya, Somalia, Sudan and Yemen…
 
 57% for the refugee ban, 33% opposed. As for temporarily blocking all citizens of the listed countries from entering the country, 56% are in favor, 32% against. Not even close.
 
