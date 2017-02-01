@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'What Democracy Looks Like'
-date: '2017-01-31T00:00:00-05:00'
+date: '2017-01-31'
 ---
 As first reported in my last post:
 
