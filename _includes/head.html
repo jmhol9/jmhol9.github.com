@@ -18,10 +18,20 @@
     <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Cormorant+Garamond:700" rel="stylesheet">
-    {% if site.show_social_icons or site.show_sharing_icons %}
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    {% endif %}
+    <script>
+       WebFontConfig = {
+         google: {
+           families: ['EB Garamond', 'Cormorant Garamond']
+         }
+       };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+          wf.async = true;
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
 
     <!-- MathJax -->
     {% if site.enable_mathjax %}
