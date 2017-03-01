@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="/wedding/styles.css" type="text/css">
 
     <!-- Font Loading Script -->
-    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async=""></script><script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async=""></script>
+    <script>
        WebFontConfig = {
          google: {
            families: ['Work Sans:900', 'Libre Baskerville:400,400i']
@@ -59,8 +61,8 @@
     <header class="site-header px2 px-responsive">
         <div class="mt2 wrap">
             <div class="measure measure--extra-wide">
-            <img class="image--rounded" src="/wedding/engagement.jpeg" alt="">
-            <a href="http://jordanholliday.com/wedding/" class="site-title">HOLY MATRIMONY</a>
+            <img class="image--rounded" src="/wedding/engagement-still.jpeg" alt="" id="banner-photo">
+            <a href="http://jordanholliday.com/wedding/" class="site-title">HOLY MATRIMONY!</a>
             <!--<div class="site-title site-subtitle">Jessica Kim & Jordan Holliday // New York // August 26, 2017</div>-->
             <!--<nav class="site-nav">
                 <a href="/contact/">Contact</a>
@@ -75,11 +77,11 @@
             <div class="posts">
                 <div class="post py3 padding-top-0">
                 <h3 class="h3 post-title">Jessica & Jordan Are Getting Married</h3>
-                  <p>It’s happening in New York City's scenic Upper West Side, on August 26, 2017, and <span style="border-bottom: 1px solid black;">we want you there</span>. But we’ll understand if you can't make it. Either way, please let us know below!</p>
+                  <p>It’s happening in New York City's scenic Upper West Side, on August 26, 2017, and <span style="color:white;background-color:rgb(51,51,51); padding: 0 .25em;">we want you there.</span> But we’ll understand if you can't make it. Either way, please let us know by April 15, 2017!</p>
                   <form action="https://formspree.io/jordanholliday@gmail.com" method="POST" class="form-stacked">
                     <input type="text" name="name" class="field-light" placeholder="Your name" required>
                     <input type="text" name="rsvp" class="field-light" placeholder="You coming?" required>
-                    <input type="number" name="guests" class="field-light" placeholder="If yes, total guests in your party" required>
+                    <input type="number" name="guests" class="field-light" placeholder="If yes, total guests in your party">
                     <textarea type="text" name="comments" class="field-light" rows="5" placeholder="Requests, words of warning, etc." style="resize: vertical"></textarea>
                     <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks/" />
                     <input type="hidden" name="_subject" value="{{ site.text.contact.subject }}" />
@@ -93,5 +95,23 @@
       </div>
     </div>
   </div>
+  <script>
+    // inlining a small function, sheesh...
+    function loadImage() {
+      var gif = document.createElement("img"),
+        target = document.getElementById("banner-photo"),
+        parent = target.parentNode;
+
+      gif.onload = function() {
+          try {
+            parent.insertBefore(gif, target);
+            parent.removeChild(target);
+          } catch (e) { }
+      };
+
+      gif.src = "/wedding/engagement-loop.gif" + "?_=" + (+new Date());;
+    }
+    loadImage();
+  </script>
 </body>
 </html>
