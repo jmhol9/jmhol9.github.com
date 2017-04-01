@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jordan Holliday</title>
+    <link>/index.xml</link>
+    <description>Recent content on Jordan Holliday</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 01 Apr 2017 18:14:51 -0400</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>11 thoughts</title>
+      <link>/post/11-thoughts/</link>
+      <pubDate>Sat, 01 Apr 2017 18:14:51 -0400</pubDate>
+      
+      <guid>/post/11-thoughts/</guid>
+      <description>&lt;p&gt;here it go, another great post out the gate.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>10 thoughts</title>
+      <link>/post/10-thoughts/</link>
+      <pubDate>Sat, 01 Apr 2017 18:12:47 -0400</pubDate>
+      
+      <guid>/post/10-thoughts/</guid>
+      <description>&lt;p&gt;here is my content will it render or nah.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
