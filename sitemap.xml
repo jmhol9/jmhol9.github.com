@@ -2,19 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2017/04/11/did-senate-republicans-steal-obamas-nomination/</loc>
+    <lastmod>2017-04-11T08:51:26-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2012/06/14/my-what-sharp-teeth-you-have-an-underdog-story/</loc>
     <lastmod>2012-06-14T18:14:51-04:00</lastmod>
   </url>
   
   <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2012-06-14T18:14:51-04:00</lastmod>
+    <lastmod>2017-04-11T08:51:26-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2012-06-14T18:14:51-04:00</lastmod>
+    <lastmod>2017-04-11T08:51:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/supreme-court/</loc>
+    <lastmod>2017-04-11T08:51:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/u.s/index.-politics/</loc>
+    <lastmod>2017-04-11T08:51:26-04:00</lastmod>
     <priority>0</priority>
   </url>
   
