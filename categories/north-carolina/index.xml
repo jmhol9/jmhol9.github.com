@@ -1,127 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2016 Election on Jordan Holliday</title>
-    <link>/categories/2016-election/index.xml</link>
-    <description>Recent content in 2016 Election on Jordan Holliday</description>
+    <title>North Carolina on Jordan Holliday</title>
+    <link>/categories/north-carolina/index.xml</link>
+    <description>Recent content in North Carolina on Jordan Holliday</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="/categories/2016-election/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Did Trump Beat Hillary By AN Historic Margin?</title>
-      <link>/2017/04/13/did-trump-beat-hillary-by-an-historic-margin/</link>
-      <pubDate>Thu, 13 Apr 2017 08:51:26 -0400</pubDate>
-      
-      <guid>/2017/04/13/did-trump-beat-hillary-by-an-historic-margin/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Another&lt;/strong&gt; timely dispatch from your man in Manhattan.&lt;/p&gt;
-
-&lt;p&gt;In the wake of November’s election, Trump took heavy fire from the press for claiming his Electoral College victory over Clinton was the largest “since Reagan.”&lt;/p&gt;
-
-&lt;p&gt;This article from Vox, headlined &lt;a href=&#34;http://www.vox.com/policy-and-politics/2017/2/16/14639058/trump-electoral-college-win&#34;&gt;Trump keeps lying about his Electoral College victory&lt;/a&gt;, is typical of the pushback. It compares, unfavorably, Trump’s Electoral College total to those of his recent predecessors. Trump received 304 (306, minus two faithless electors) out of 538 electoral votes, which is less than:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Obama’s 332 in 2012&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Obama’s 365 in 2008&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bill Clinton’s 379 in 1996&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Bill Clinton’s 370 in 1992&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;and George H. W. Bush’s 426 in 1988&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;While those numbers are clear, they are also a poor metric for the magnitude of Trump’s win.&lt;/p&gt;
-
-&lt;p&gt;I say that because in any election year, only a minority of all electoral votes are up for grabs. The majority will go to one candidate or the other purely because of their party affiliation. No political fortune or failure will change that. That Trump won Tennessee’s 11 votes had nothing to do with his merits as a candidate, for instance.&lt;/p&gt;
-
-&lt;p&gt;Because of this, and because most states apportion their votes in winner-take-all fashion, a presidential election can be reduced the outcomes of a relative handful of states: the “swing states” where both candidates spend the bulk of their time and money. To see how well the candidates fared, you have to focus on these states and discount the states where the result was a foregone conclusion. That allows you to evaluate the outcome independent of the fact that both Democrats and Republicans currently have 160+ guaranteed electoral votes baked into the system.&lt;/p&gt;
-
-&lt;p&gt;For the sake of argument I’ll say that a swing state is one where in the final vote, the major parties finished within 10 percentage points of each other. Or put another way, one where the loser needed five points or fewer to flip the state.&lt;/p&gt;
-
-&lt;p&gt;Considering only those states, here are the presidential election results &amp;ldquo;since Reagan&amp;rdquo;:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Year&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;Rep. Votes&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;Dem. Votes&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;Winner&amp;rsquo;s Margin&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1988&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;168&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;96&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;+26%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;1992&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;133&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;127&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-2%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;1996&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;124&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;127&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;+1%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;2000&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;125&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;99&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;+12%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;2004&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;103&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;160&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-22%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;2008&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;53&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;106&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;+33%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;2012&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;42&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;141&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;+54%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;2016&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;178&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;36&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;+66%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;By this metric Trump’s win &lt;strong&gt;is&lt;/strong&gt; the biggest since Reagan! I believe this also explains why it seemed big: Trump got an outsized share of the swing states, which dominate the discussion of electoral results.&lt;/p&gt;
-
-&lt;p&gt;Does this approach underrate strong winners (who are more likely to win by &amp;gt;10%) and overrate weak winners (who have more close calls)? Maybe, but I expect that effect to be net-neutral, as strong winners should also flip more close states into their column and away from their opponents. It also might &lt;strong&gt;over&lt;/strong&gt;rate weak losers, like Bob Dole in 1996, whose total above includes 32 electoral votes from Texas, which he only won by 5 percent.&lt;/p&gt;
-
-&lt;p&gt;The other anomaly to note is that John Kerry in 2004 won California by 9.95%, so it counts toward his total. Less California&amp;rsquo;s 55 votes, the numbers for 2004 are 103–105 against Bush, reflecting the close overall result.&lt;/p&gt;
-
-&lt;p&gt;This is a more telling and certainly more interesting way to compare presidential elections across time than raw electoral vote totals. Also it was tedious as hell and I understand why those churning out grist for content mills like Vox wouldn&amp;rsquo;t bother.&lt;/p&gt;
-
-&lt;p&gt;All this said, I still rate the original claim, that Trump won by an historic margin, four pants-on-fire out of five (🔥👖🔥👖🔥👖🔥👖 / 5) because saying “an historic” is obviously wrong, “a” is the proper article there and nobody worth listening to thinks otherwise.&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="/categories/north-carolina/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>10 Thoughts On &#39;North Carolina Is No Longer A Democracy&#39;</title>
@@ -202,46 +87,6 @@
 &lt;p&gt;Let me conclude by saying I do not think Reynolds should be fired for this. He probably couldn’t be anyway, tenure being what it is. My opinion is that a public reprimand by UNC and an apology from Reynolds would fit the crime &lt;em&gt;and&lt;/em&gt; discourage others in his position from pulling such deceptive, attention-grubbing stunts in the future.&lt;/p&gt;
 
 &lt;p&gt;In the interest of fairness, I will email Reynolds to see if he cares to respond in this space.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>What Democracy Looks Like</title>
-      <link>/2017/01/31/what-democracy-looks-like/</link>
-      <pubDate>Tue, 31 Jan 2017 20:19:47 -0400</pubDate>
-      
-      <guid>/2017/01/31/what-democracy-looks-like/</guid>
-      <description>&lt;p&gt;As first reported in my last post:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;A new &lt;a href=&#34;http://www.rasmussenreports.com/public_content/politics/current_events/immigration/january_2017/most_support_temporary_ban_on_newcomers_from_terrorist_havens&#34;&gt;Rasmussen Reports&lt;/a&gt; national telephone and online survey finds that 57% of Likely U.S. Voters favor a temporary ban on refugees from Syria, Iraq, Iran, Libya, Somalia, Sudan and Yemen…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;57% for the refugee ban, 33% opposed. As for temporarily blocking all citizens of the listed countries from entering the country, 56% are in favor, 32% against. Not even close.&lt;/p&gt;
-
-&lt;p&gt;The premise of republican democracy is that at some point, policy yields to the will of the people. Delay that point far enough, and you get a correction like the one Trump is now presiding over.&lt;/p&gt;
-
-&lt;p&gt;Anyway, my final thought on the matter is this. If you were asked to devise a policy position that encapsulates the callous arrogance and obliviousness of American liberalism circa January 2017, you couldn’t do any better than angrily insisting that Yemenis and Somalis and Libyans &lt;em&gt;must be&lt;/em&gt; resettled in Wisconsin.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The Thrill Of The Fight</title>
-      <link>/2017/01/28/the-thrill-of-the-fight/</link>
-      <pubDate>Sat, 28 Jan 2017 20:22:18 -0400</pubDate>
-      
-      <guid>/2017/01/28/the-thrill-of-the-fight/</guid>
-      <description>&lt;p&gt;Why are liberals fighting Trump on refugees? Accepting refugees from countries like Syria, Iraq, and Yemen is not popular.* There are better ways to help people in those countries. A sane left, whose goal was not opposing President Trump but rather advancing its values, would not waste time trying to convince America that importing Syrians serves the national interest. It&amp;rsquo;s a losing issue. The fight highlights that Trump is in fact giving most of America what it wants.&lt;/p&gt;
-
-&lt;p&gt;But the point is not to advance liberal values. It is to stoke outrage and obstruct the President at every turn. (When the right took a similar tack during the previous administration, it was less disruptive because conservatives are less prone to marching in the streets and don’t control the mainstream media.)&lt;/p&gt;
-
-&lt;p&gt;This is why the issue is presented as an absurd choice between resettling refugees in the United States, and ignoring them. Sensible alternatives, such as increased support for refugee camps in areas affected by the refugee ban, are not mentioned.&lt;/p&gt;
-
-&lt;p&gt;Never mind that such a plan would benefit more refugees than resettlement ever could. Never mind that it would be great PR for America. Never mind that, unlike resettlement, it would draw bipartisan support in Congress and from the electorate.&lt;/p&gt;
-
-&lt;p&gt;Championing a compromise like that would require ceding an inch to President Trump, so the left won’t do it.&lt;/p&gt;
-
-&lt;p&gt;*Here’s &lt;a href=&#34;https://poll.qu.edu/national/release-detail?ReleaseID=2416&#34;&gt;one poll&lt;/a&gt; that shows as much. Google it and there’s a bunch more.&lt;/p&gt;
 </description>
     </item>
     
