@@ -18,7 +18,7 @@
     <script>
        WebFontConfig = {
          google: {
-           families: ['Work Sans:900', 'Libre Baskerville:400,400i']
+           families: ['Work Sans:900', 'Roboto+Mono:400,400i,700']
          }
        };
 
@@ -50,51 +50,11 @@
     <meta name="theme-color" content="#ffffff">
   </head>
 
-<body class="site">
-  <div class="site-wrap">
-    <header class="site-header px2 px-responsive">
-        <div class="mt2 wrap">
-            <div class="measure measure--extra-wide">
-                <a href="http://jordanholliday.com/wedding/" class="site-title">HOLY MATRIMONY!</a>
-                <!--<div class="site-title site-subtitle">Jessica Kim & Jordan Holliday // New York // August 26, 2017</div>-->
-                <!--<nav class="site-nav">
-                    <a href="/contact/">Contact</a>
-                </nav>-->
-            <div class="clearfix"></div>
-            </div>
-        </div>
-    </header>
-    <div class="post p2 p-responsive wrap padding-top-0" role="main">
-      <div class="measure">
-        <div class="home">
-            <div class="posts">
-                <div class="post py3 padding-top-0">
-                    <h3 class="h3 post-title">Thanks!</h3>
-                    <p style="line-height: 2em;">– Jessica & Jordan</p>
-                </div>
-            </div>
-        </div>
-        <img class="footer__image" src="/wedding/man-and-wife.png" alt="">
-      </div>
+  <body class="body body--flex">
+    <div class="container">
+      <!-- THANKS -->
+      <div class="header header--h3">Thanks!</div>
+      <p class="paragraph">– Jessica & Jordan</p>
     </div>
-  </div>
-  <script>
-    // inlining a small function, sheesh...
-    function loadImage() {
-      var gif = document.createElement("img"),
-        target = document.getElementById("banner-photo"),
-        parent = target.parentNode;
-
-      gif.onload = function() {
-          try {
-            parent.insertBefore(gif, target);
-            parent.removeChild(target);
-          } catch (e) { }
-      };
-
-      gif.src = "/wedding/engagement-loop.gif" + "?_=" + (+new Date());;
-    }
-    loadImage();
-  </script>
-</body>
+  </body>
 </html>

@@ -18,7 +18,7 @@
     <script>
        WebFontConfig = {
          google: {
-           families: ['Work Sans:900', 'Libre Baskerville:400,400i']
+           families: ['Work Sans:900', 'Roboto+Mono:400,400i,700']
          }
        };
 
@@ -50,46 +50,73 @@
     <meta name="theme-color" content="#ffffff">
   </head>
 
-<body class="site">
-  <div class="site-wrap">
-    <header class="site-header px2 px-responsive">
-        <div class="mt2 wrap">
-            <div class="measure measure--extra-wide">
-            <img class="image--rounded" src="/wedding/engagement-still.jpeg" alt="" id="banner-photo">
-            <a href="http://jordanholliday.com/wedding/" class="site-title">HOLY MATRIMONY!</a>
-            <!--<div class="site-title site-subtitle">Jessica Kim & Jordan Holliday // New York // August 26, 2017</div>-->
-            <!--<nav class="site-nav">
-                <a href="/contact/">Contact</a>
-            </nav>-->
-            <div class="clearfix"></div>
-            </div>
-        </div>
-    </header>
-    <div class="post p2 p-responsive wrap padding-top-0" role="main">
-      <div class="measure">
-        <div class="home">
-            <div class="posts">
-                <div class="post py3 padding-top-0">
-                <h3 class="h3 post-title">Jessica & Jordan Are Getting Married</h3>
-                  <p style="line-height: 2em;">It’s happening in New York City's scenic Upper West Side neighborhood, on August 26, 2017, and <span style="color:white;background-color:rgb(51,51,51);padding:.25em;border-radius:2px;">we want you there.</span> But we’ll understand if you can't make it. Either way, please let us know by April 30, 2017!</p>
-                  <form action="https://formspree.io/jordanholliday@gmail.com" method="POST" class="form-stacked">
-                    <input type="text" name="name" class="field-light" placeholder="Your name" required>
-                    <input type="text" name="rsvp" class="field-light" placeholder="You coming?" required>
-                    <input type="number" name="guests" class="field-light" placeholder="If yes, total guests in your party">
-                    <textarea type="text" name="comments" class="field-light" rows="5" placeholder="Requests, words of warning, etc." style="resize: vertical"></textarea>
-                    <input type="hidden" name="_next" value="/wedding/rsvp-thanks/" />
-                    <input type="hidden" name="_subject" value="RSVP Alert" />
-                    <input type="text" name="_gotcha" style="display:none" />
-                    <input type="submit" class="button button-blue button-big mobile-block button--yellow" value="Submit">
-                  </form>
-                </div>
-            </div>
-        </div>
-        <img class="footer__image" src="/wedding/man-and-wife.png" alt="">
+  <body class="body body--flex">
+    <div class="container">
+      <!-- NAV -->
+      <div class="nav">
+        <span>
+          // <a class="link nav__link" href="#details">Details</a>
+        </span>
+        <span>
+          // <a class="link nav__link" href="#accommodations">Accommodations</a>
+        </span>
+        <span>
+          // <a class="link nav__link" href="#registry">Registry</a>
+        </span>
+        <span>
+          // <a class="link nav__link" href="#rsvp">RSVP</a>
+        </span>
       </div>
+      <div style="display: flex; justify-content: center;">
+        <span class="header header--h1">HOLY MATRIMONY!</span>
+      </div>
+      <img class="image image--padding" src="/wedding/engagement-still.jpeg" alt="" id="banner-photo">
+
+      <!-- INTRO -->
+      <div class="header header--h3">Jessica & Jordan Are Getting Married</div>
+      <p class="paragraph">It's happening Saturday, August 26, 2017 in New York's scenic Upper West Side neighborhood. Specific details below. <a class="link" href="mailto:jordanholliday@gmail.com">Email us</a> if you have other questions</p>
+      <p class="paragraph">See you in August!</p>
+      <p class="paragraph">– Jessica & Jordan</p>
+
+      <!-- VENUE -->
+      <a name="details"></a>
+      <div class="header header--h3">Details</div>
+      <p class="paragraph"><span class="span span--emphasis">When:</span> Saturday, August 26, 2017 at 3pm</p>
+      <p class="paragraph"><span class="span span--emphasis">Where:</span> 150 W 83rd Street (Redeemer Presbyterian Church). <a class="link" href="https://goo.gl/maps/UQDn9F3T6DH2">Google Maps</a>.</p>
+      <p class="paragraph"><span class="span span--emphasis">Reception:</span> Following the ceremony, we'll have barbecue, beverages, speeches, and dancing at the same location. Rumors that there will be a karaoke machine cannot be confirmed at this time.</p>
+      <img class="image image--padding" src="/wedding/wedding-map-mini.png" alt="venue map">
+
+      <!-- ACCOMODATIONS -->
+      <a name="accommodations"></a>
+      <div class="header header--h3">Accommodations</div>
+      <p class="paragraph">We've decided not to reserve a block of rooms anywhere. Instead, we suggest checking <a class="link" href="https://www.airbnb.com/">Airbnb</a> before looking into hotels.</p>
+      <p class="paragraph">Relative to the wedding venue, the most convenient area to stay is from about 50th Street to 100th Street on the Upper West Side. The Upper East Side is also a good choice, although you'll probably want to take a $10–$15 cab ride across Central Park to reach the church.</p>
+      <p class="paragraph">If you have any questions while choosing a place, <a class="link" href="mailto:jordanholliday@gmail.com">email us</a>!</p>
+
+      <!-- REGISTRY -->
+      <a name="registry"></a>
+      <div class="header header--h3">Registry</div>
+      <p class="paragraph">Having you at the wedding will be plenty. However, if the spirit so moves you, we are <a class="link" href="https://www.zola.com/registry/thehollidays">registered on Zola</a>.</p>
+
+      <!-- RSVP -->
+      <a name="rsvp"></a>
+      <div class="header header--h3">RSVP</div>
+      <p class="paragraph">Let us know if you'll be there! If you already RSVP'd in response to our save-the-date, you don't need to RSVP again.</p>
+      <form action="https://formspree.io/jordanholliday@gmail.com" method="POST" class="form form--stacked">
+        <input type="text" name="name" class="form__field" placeholder="Your name" required>
+        <input type="text" name="rsvp" class="form__field" placeholder="You coming?" required>
+        <input type="number" name="guests" class="form__field" placeholder="If yes, total guests in your party">
+        <textarea type="text" name="comments" class="form__field" rows="5" placeholder="Requests, words of warning, etc." style="resize: vertical"></textarea>
+        <input type="hidden" name="_next" value="/wedding/rsvp-thanks/" />
+        <input type="hidden" name="_subject" value="RSVP Alert" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="submit" class="form__button" value="Submit">
+      </form>
+    
+      <!-- FOOTER -->
+      <img class="image footer__image" src="/wedding/man-and-wife.png" alt="">
     </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </body>
   <script>
     // inlining a small function, sheesh...
     function loadImage() {
@@ -104,6 +131,7 @@
           } catch (e) { }
       };
 
+      gif.classList = ["image image--padding"];
       gif.src = "/wedding/engagement-loop.gif" + "?_=" + (+new Date());;
     }
     loadImage();
