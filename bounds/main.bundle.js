@@ -4919,14 +4919,14 @@ var InfiniteScrollService = (function () {
         // trim top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
             contentContainer.firstElementChild.getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING) {
-            console.log("trimming top");
+            // console.log("trimming top");
             this.removeFirstChild(contentContainer);
             newBounds = this.updateBounds(newBounds, 1, 0);
         }
         // trim bottom while necessary
         while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
             contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING) {
-            console.log("trimming bottom");
+            // console.log("trimming bottom");
             this.removeLastChild(contentContainer);
             newBounds = this.updateBounds(newBounds, 0, -1);
         }
@@ -4934,7 +4934,7 @@ var InfiniteScrollService = (function () {
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
             newBounds.firstChildIdx > 0 &&
             contentContainer.firstElementChild.getBoundingClientRect().top > scrollContainerTop - BUFFER_PADDING) {
-            console.log("padding top");
+            // console.log("padding top");
             contentContainer.insertBefore(this.getChildByIdx(children, [newBounds.firstChildIdx - 1]), contentContainer.firstChild);
             newBounds = this.updateBounds(newBounds, -1, 0);
         }
@@ -4942,11 +4942,11 @@ var InfiniteScrollService = (function () {
         while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
             newBounds.lastChildIdx < Object.keys(children).length - 1 &&
             contentContainer.lastElementChild.getBoundingClientRect().bottom < scrollContainerBottom + BUFFER_PADDING) {
-            console.log("padding bottom", bounds.lastChildIdx + 1);
+            // console.log("padding bottom", bounds.lastChildIdx + 1);
             contentContainer.appendChild(this.getChildByIdx(children, [newBounds.lastChildIdx + 1]));
             newBounds = this.updateBounds(newBounds, 0, 1);
         }
-        this.ensureScrollBuffer(scrollContainer);
+        // this.ensureScrollBuffer(scrollContainer);
         return newBounds;
     };
     InfiniteScrollService.prototype.emptyContainer = function (container) {
