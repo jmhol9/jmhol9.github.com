@@ -4967,13 +4967,13 @@ var InfiniteScrollService = (function () {
         return { element: element, scrollTop: scrollContainer.scrollTop, offsetTop: element.offsetTop };
     };
     InfiniteScrollService.prototype.setScrollDepthByReference = function (scrollContainer, reference) {
-        var compare = {
+        console.log({
             oldScroll: reference.scrollTop,
             newScroll: scrollContainer.scrollTop,
             oldOffset: reference.offsetTop,
             newOffset: reference.element.offsetTop,
             difference: (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop)
-        };
+        });
         var difference = (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop);
         if (difference === 0) {
             return;
