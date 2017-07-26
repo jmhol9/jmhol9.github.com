@@ -4914,7 +4914,7 @@ var InfiniteScrollService = (function () {
     InfiniteScrollService.prototype.updateContainerBuffers = function (contentContainer, scrollContainer, children, focusIdx, bounds) {
         if (focusIdx === void 0) { focusIdx = 0; }
         // get scroll container top & bottom
-        var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom, scrollDepthReference = this.getScrollDepthReference(contentContainer);
+        var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom, scrollDepthReference = this.getScrollDepthReference(contentContainer, scrollContainer);
         var newBounds = this.updateBounds(bounds, 0, 0);
         // trim top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
@@ -4934,7 +4934,7 @@ var InfiniteScrollService = (function () {
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
             newBounds.firstChildIdx > 0 &&
             contentContainer.firstElementChild.getBoundingClientRect().top > scrollContainerTop - BUFFER_PADDING) {
-            // console.log("padding top");
+            console.log("padding top");
             contentContainer.insertBefore(this.getChildByIdx(children, [newBounds.firstChildIdx - 1]), contentContainer.firstChild);
             newBounds = this.updateBounds(newBounds, -1, 0);
         }
@@ -4942,7 +4942,7 @@ var InfiniteScrollService = (function () {
         while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
             newBounds.lastChildIdx < Object.keys(children).length - 1 &&
             contentContainer.lastElementChild.getBoundingClientRect().bottom < scrollContainerBottom + BUFFER_PADDING) {
-            // console.log("padding bottom", bounds.lastChildIdx + 1);
+            console.log("padding bottom");
             contentContainer.appendChild(this.getChildByIdx(children, [newBounds.lastChildIdx + 1]));
             newBounds = this.updateBounds(newBounds, 0, 1);
         }
@@ -4954,7 +4954,7 @@ var InfiniteScrollService = (function () {
             this.removeFirstChild(container);
         }
     };
-    InfiniteScrollService.prototype.getScrollDepthReference = function (contentContainer) {
+    InfiniteScrollService.prototype.getScrollDepthReference = function (contentContainer, scrollContainer) {
         // reference el is first contentContainer child currently visible (ergo, won't be removed).
         var element = Array.from(contentContainer.children)
             .find(function (el) {
@@ -4964,16 +4964,21 @@ var InfiniteScrollService = (function () {
         if (element == null) {
             throw new Error("Cannot get scrollDepthReference, no element in view");
         }
-        return { element: element, boundingRectTop: element.getBoundingClientRect().top };
+        return { element: element, scrollTop: scrollContainer.scrollTop, offsetTop: element.offsetTop };
     };
     InfiniteScrollService.prototype.setScrollDepthByReference = function (scrollContainer, reference) {
-        var currentBoundingRect = reference.element.getBoundingClientRect();
-        if (currentBoundingRect.top === reference.boundingRectTop) {
+        // const compare = {
+        // 	oldScroll: reference.scrollTop,
+        // 	newScroll: scrollContainer.scrollTop,
+        // 	oldOffset: reference.offsetTop,
+        // 	newOffset: reference.element.offsetTop,
+        // 	difference: (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop)
+        // };
+        var difference = (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop);
+        if (difference === 0) {
             return;
         }
-        var boundingRectTopDiff = reference.boundingRectTop - currentBoundingRect.top;
-        scrollContainer.scrollTop = scrollContainer.scrollTop + boundingRectTopDiff;
-        console.log("set scroll by reference");
+        scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
     };
     InfiniteScrollService.prototype.removeFirstChild = function (container) {
         container.removeChild(container.firstElementChild);
