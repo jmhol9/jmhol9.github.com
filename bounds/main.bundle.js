@@ -4914,7 +4914,7 @@ var InfiniteScrollService = (function () {
     InfiniteScrollService.prototype.updateContainerBuffers = function (contentContainer, scrollContainer, children, focusIdx, bounds) {
         if (focusIdx === void 0) { focusIdx = 0; }
         // get scroll container top & bottom
-        var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom;
+        var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom, scrollDepthReference = this.getScrollDepthReference(contentContainer);
         var newBounds = this.updateBounds(bounds, 0, 0);
         // trim top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
@@ -4946,13 +4946,34 @@ var InfiniteScrollService = (function () {
             contentContainer.appendChild(this.getChildByIdx(children, [newBounds.lastChildIdx + 1]));
             newBounds = this.updateBounds(newBounds, 0, 1);
         }
-        // this.ensureScrollBuffer(scrollContainer);
+        this.setScrollDepthByReference(scrollContainer, scrollDepthReference);
         return newBounds;
     };
     InfiniteScrollService.prototype.emptyContainer = function (container) {
         while (!!container.children.length) {
             this.removeFirstChild(container);
         }
+    };
+    InfiniteScrollService.prototype.getScrollDepthReference = function (contentContainer) {
+        // reference el is first contentContainer child currently visible (ergo, won't be removed).
+        var element = Array.from(contentContainer.children)
+            .find(function (el) {
+            var boundingRect = el.getBoundingClientRect();
+            return Math.max(boundingRect.top, boundingRect.bottom) > 0;
+        });
+        if (element == null) {
+            throw new Error("Cannot get scrollDepthReference, no element in view");
+        }
+        return { element: element, boundingRectTop: element.getBoundingClientRect().top };
+    };
+    InfiniteScrollService.prototype.setScrollDepthByReference = function (scrollContainer, reference) {
+        var currentBoundingRect = reference.element.getBoundingClientRect();
+        if (currentBoundingRect.top === reference.boundingRectTop) {
+            return;
+        }
+        var boundingRectTopDiff = reference.boundingRectTop - currentBoundingRect.top;
+        scrollContainer.scrollTop = scrollContainer.scrollTop + boundingRectTopDiff;
+        console.log("set scroll by reference");
     };
     InfiniteScrollService.prototype.removeFirstChild = function (container) {
         container.removeChild(container.firstElementChild);
@@ -5403,7 +5424,6 @@ var FullTextViewComponent = (function () {
             obj[String(paragraph.id)] = paragraph.innerElementRef.nativeElement;
             return obj;
         }, {});
-        console.log(this.paragraphElements);
     };
     FullTextViewComponent.prototype.initScrollSubscription = function () {
         var _this = this;
