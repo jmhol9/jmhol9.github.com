@@ -4979,7 +4979,7 @@ var InfiniteScrollService = (function () {
             newOffset: reference.element.offsetTop,
             difference: (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop)
         });
-        var difference = (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop);
+        var difference = (scrollContainer.scrollTop - reference.element.offsetTop) - (reference.scrollTop - reference.offsetTop);
         if (difference === 0) {
             return;
         }
