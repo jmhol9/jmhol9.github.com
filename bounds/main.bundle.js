@@ -4919,14 +4919,14 @@ var InfiniteScrollService = (function () {
         // trim top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
             contentContainer.firstElementChild.getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING) {
-            // console.log("trimming top");
+            console.log("trimming top");
             this.removeFirstChild(contentContainer);
             newBounds = this.updateBounds(newBounds, 1, 0);
         }
         // trim bottom while necessary
         while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
             contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING) {
-            // console.log("trimming bottom");
+            console.log("trimming bottom");
             this.removeLastChild(contentContainer);
             newBounds = this.updateBounds(newBounds, 0, -1);
         }
@@ -4967,13 +4967,13 @@ var InfiniteScrollService = (function () {
         return { element: element, scrollTop: scrollContainer.scrollTop, offsetTop: element.offsetTop };
     };
     InfiniteScrollService.prototype.setScrollDepthByReference = function (scrollContainer, reference) {
-        // const compare = {
-        // 	oldScroll: reference.scrollTop,
-        // 	newScroll: scrollContainer.scrollTop,
-        // 	oldOffset: reference.offsetTop,
-        // 	newOffset: reference.element.offsetTop,
-        // 	difference: (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop)
-        // };
+        var compare = {
+            oldScroll: reference.scrollTop,
+            newScroll: scrollContainer.scrollTop,
+            oldOffset: reference.offsetTop,
+            newOffset: reference.element.offsetTop,
+            difference: (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop)
+        };
         var difference = (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop);
         if (difference === 0) {
             return;
