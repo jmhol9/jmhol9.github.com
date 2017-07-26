@@ -4916,7 +4916,7 @@ var InfiniteScrollService = (function () {
         if (focusIdx === void 0) { focusIdx = 0; }
         if (this.forceScroll) {
             this.forceScroll = false;
-            return;
+            return bounds;
         }
         // get scroll container top & bottom
         var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom, scrollDepthReference = this.getScrollDepthReference(contentContainer, scrollContainer);
