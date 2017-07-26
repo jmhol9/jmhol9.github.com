@@ -4978,7 +4978,7 @@ var InfiniteScrollService = (function () {
         if (difference === 0) {
             return;
         }
-        scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
+        // scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
     };
     InfiniteScrollService.prototype.removeFirstChild = function (container) {
         container.removeChild(container.firstElementChild);
