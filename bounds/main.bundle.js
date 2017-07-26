@@ -4883,6 +4883,7 @@ var BUFFER_PADDING = 500, MIN_PADDING = 10, MAX_LOOPS = 5;
 var withinLoopLimit = function (newIdx, oldIdx) { return Math.abs(newIdx - oldIdx) <= MAX_LOOPS; };
 var InfiniteScrollService = (function () {
     function InfiniteScrollService() {
+        this.forceScroll = false;
     }
     InfiniteScrollService.prototype.fillContainer = function (contentContainer, scrollContainer, children, focusIdx, focusPaddingTop) {
         if (focusIdx === void 0) { focusIdx = 0; }
@@ -4913,6 +4914,10 @@ var InfiniteScrollService = (function () {
     };
     InfiniteScrollService.prototype.updateContainerBuffers = function (contentContainer, scrollContainer, children, focusIdx, bounds) {
         if (focusIdx === void 0) { focusIdx = 0; }
+        if (this.forceScroll) {
+            this.forceScroll = false;
+            return;
+        }
         // get scroll container top & bottom
         var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom, scrollDepthReference = this.getScrollDepthReference(contentContainer, scrollContainer);
         var newBounds = this.updateBounds(bounds, 0, 0);
@@ -4978,7 +4983,8 @@ var InfiniteScrollService = (function () {
         if (difference === 0) {
             return;
         }
-        // scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
+        scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
+        this.forceScroll = true;
     };
     InfiniteScrollService.prototype.removeFirstChild = function (container) {
         container.removeChild(container.firstElementChild);
