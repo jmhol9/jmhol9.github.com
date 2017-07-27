@@ -1615,7 +1615,11 @@ var RenderType_ParagraphComponent = __WEBPACK_IMPORTED_MODULE_0__angular_core__[
 });
 function View_ParagraphComponent_1(l) {
     return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* ɵvid */](0, [
-        (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'p', [], null, null, null, null, null)),
+        (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* ɵeld */](0, null, null, 1, 'p', [[
+                'class',
+                'full-text__paragraph__text'
+            ]
+        ], null, null, null, null, null)),
         (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵted */](null, [
             '\n		',
             '\n	'
@@ -1656,7 +1660,11 @@ function View_ParagraphComponent_3(l) {
 function View_ParagraphComponent_2(l) {
     return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* ɵvid */](0, [
         (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵted */](null, ['\n	'])),
-        (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* ɵeld */](0, null, null, 4, 'p', [], null, null, null, null, null)),
+        (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* ɵeld */](0, null, null, 4, 'p', [[
+                'class',
+                'full-text__paragraph__text'
+            ]
+        ], null, null, null, null, null)),
         (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵted */](null, ['\n		'])),
         (l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_32" /* ɵand */](8388608, null, null, 1, null, View_ParagraphComponent_3)),
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵdid */](401408, null, 0, __WEBPACK_IMPORTED_MODULE_1__angular_common__["l" /* NgForOf */], [
@@ -1770,7 +1778,7 @@ var ParagraphComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_
     paragraph: 'paragraph',
     bookPosition: 'bookPosition'
 }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2pvcmRhbi9nRHJpdmUvSk1ILVByb2plY3RzL3Jzdi1yZWFkZXItZnJvbnRlbmQvc3JjL2FwcC9jb21wb25lbnRzL3BhcmFncmFwaC9wYXJhZ3JhcGguY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL2pvcmRhbi9nRHJpdmUvSk1ILVByb2plY3RzL3Jzdi1yZWFkZXItZnJvbnRlbmQvc3JjL2FwcC9jb21wb25lbnRzL3BhcmFncmFwaC9wYXJhZ3JhcGguY29tcG9uZW50LnRzIiwibmc6Ly8vVXNlcnMvam9yZGFuL2dEcml2ZS9KTUgtUHJvamVjdHMvcnN2LXJlYWRlci1mcm9udGVuZC9zcmMvYXBwL2NvbXBvbmVudHMvcGFyYWdyYXBoL3BhcmFncmFwaC50ZW1wbGF0ZS5odG1sIiwibmc6Ly8vVXNlcnMvam9yZGFuL2dEcml2ZS9KTUgtUHJvamVjdHMvcnN2LXJlYWRlci1mcm9udGVuZC9zcmMvYXBwL2NvbXBvbmVudHMvcGFyYWdyYXBoL3BhcmFncmFwaC5jb21wb25lbnQudHMuUGFyYWdyYXBoQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImZ1bGwtdGV4dF9fcGFyYWdyYXBoIGxoLWNvcHlcIiBbbmdDbGFzc109XCJ7J2xoLWNvcHknOiB0cnVlfVwiICNpbm5lckVsZW1lbnRSZWY+XG5cdDxzcGFuIGNsYXNzPVwiZnVsbC10ZXh0X19wYXJhZ3JhcGhfX21ldGEgbGlnaHQtc2lsdmVyIGY3IGNvZGVcIj5cblx0XHR7eyBwYXJhZ3JhcGguaWQgfX0gLyB7eyBwYXJhZ3JhcGguZmlyc3RJbmRleCArIDEgfCBudW1iZXIgfX1cblx0PC9zcGFuPlxuXHQ8cCAqbmdJZj1cIiFmb2N1c2VkOyBlbHNlIGVsc2VCbG9jaztcIj5cblx0XHR7eyB0ZXh0IH19XG5cdDwvcD5cbjwvZGl2PlxuPG5nLXRlbXBsYXRlICNlbHNlQmxvY2s+XG5cdDxwPlxuXHRcdDxzcGFuXG5cdFx0XHQqbmdGb3I9XCJsZXQgd29yZCBvZiBwYXJhZ3JhcGgudGV4dDsgbGV0IGkgPSBpbmRleFwiXG5cdFx0XHRbbmdDbGFzc109XCJ7J2Z1bGwtdGV4dF9fY3VycmVudC13b3JkJzogaSA9PT0gYm9va1Bvc2l0aW9uLndvcmRJZHh9XCI+XG5cdFx0XHR7eyB3b3JkICsgXCIgXCIgfX1cblx0XHQ8L3NwYW4+XG5cdDwvcD5cbjwvbmctdGVtcGxhdGU+XG4iLCI8YXBwLXBhcmFncmFwaD48L2FwcC1wYXJhZ3JhcGg+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNJQztJQUFxQztNQUFBO01BQUE7SUFBQTtJQUFBOzs7O0lBQUE7SUFBQTs7Ozs7SUFNcEM7Z0JBQUE7Ozs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO2dCQUVDO0lBQW9FO01BQUE7TUFBQTtJQUFBO0lBQUE7Ozs7SUFBcEU7SUFGRCxTQUVDLFNBRkQ7O0lBRXFFO0lBQUE7Ozs7O0lBSi9DO0lBQ3ZCO0lBQUc7SUFDRjtnQkFBQTs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUlPO0lBQ0o7Ozs7SUFKRjtJQURELFNBQ0MsU0FERDs7Ozs7OztJQVZGO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO2dCQUFBOzs7OztJQUFBO0tBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO2dCQUEwQztJQUErQztNQUN4RjtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQThEO01BQUE7TUFBQTtNQUFBO0lBQUE7SUFBQTtnQkFBQTtJQUV2RDtJQUNQO2dCQUFBOzs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUVJO0lBQ0M7TUFDTjtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBUWM7Ozs7SUFoQlQ7SUFBcUM7SUFBMUMsU0FBSyxVQUFxQyxTQUExQztJQUlJO0lBQUE7SUFBSCxVQUFHLG1CQUFIOzs7SUFIOEQ7SUFBQTtJQUFBOzs7OztJQ0QvRDtnQkFBQTs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2pvcmRhbi9nRHJpdmUvSk1ILVByb2plY3RzL3Jzdi1yZWFkZXItZnJvbnRlbmQvc3JjL2FwcC9jb21wb25lbnRzL3BhcmFncmFwaC9wYXJhZ3JhcGguY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL2pvcmRhbi9nRHJpdmUvSk1ILVByb2plY3RzL3Jzdi1yZWFkZXItZnJvbnRlbmQvc3JjL2FwcC9jb21wb25lbnRzL3BhcmFncmFwaC9wYXJhZ3JhcGguY29tcG9uZW50LnRzIiwibmc6Ly8vVXNlcnMvam9yZGFuL2dEcml2ZS9KTUgtUHJvamVjdHMvcnN2LXJlYWRlci1mcm9udGVuZC9zcmMvYXBwL2NvbXBvbmVudHMvcGFyYWdyYXBoL3BhcmFncmFwaC50ZW1wbGF0ZS5odG1sIiwibmc6Ly8vVXNlcnMvam9yZGFuL2dEcml2ZS9KTUgtUHJvamVjdHMvcnN2LXJlYWRlci1mcm9udGVuZC9zcmMvYXBwL2NvbXBvbmVudHMvcGFyYWdyYXBoL3BhcmFncmFwaC5jb21wb25lbnQudHMuUGFyYWdyYXBoQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPGRpdiBjbGFzcz1cImZ1bGwtdGV4dF9fcGFyYWdyYXBoIGxoLWNvcHlcIiBbbmdDbGFzc109XCJ7J2xoLWNvcHknOiB0cnVlfVwiICNpbm5lckVsZW1lbnRSZWY+XG5cdDxzcGFuIGNsYXNzPVwiZnVsbC10ZXh0X19wYXJhZ3JhcGhfX21ldGEgbGlnaHQtc2lsdmVyIGY3IGNvZGVcIj5cblx0XHR7eyBwYXJhZ3JhcGguaWQgfX0gLyB7eyBwYXJhZ3JhcGguZmlyc3RJbmRleCArIDEgfCBudW1iZXIgfX1cblx0PC9zcGFuPlxuXHQ8cCAqbmdJZj1cIiFmb2N1c2VkOyBlbHNlIGVsc2VCbG9jaztcIiBjbGFzcz1cImZ1bGwtdGV4dF9fcGFyYWdyYXBoX190ZXh0XCI+XG5cdFx0e3sgdGV4dCB9fVxuXHQ8L3A+XG48L2Rpdj5cbjxuZy10ZW1wbGF0ZSAjZWxzZUJsb2NrPlxuXHQ8cCBjbGFzcz1cImZ1bGwtdGV4dF9fcGFyYWdyYXBoX190ZXh0XCI+XG5cdFx0PHNwYW5cblx0XHRcdCpuZ0Zvcj1cImxldCB3b3JkIG9mIHBhcmFncmFwaC50ZXh0OyBsZXQgaSA9IGluZGV4XCJcblx0XHRcdFtuZ0NsYXNzXT1cInsnZnVsbC10ZXh0X19jdXJyZW50LXdvcmQnOiBpID09PSBib29rUG9zaXRpb24ud29yZElkeH1cIj5cblx0XHRcdHt7IHdvcmQgKyBcIiBcIiB9fVxuXHRcdDwvc3Bhbj5cblx0PC9wPlxuPC9uZy10ZW1wbGF0ZT5cbiIsIjxhcHAtcGFyYWdyYXBoPjwvYXBwLXBhcmFncmFwaD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQ0lDO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBd0U7TUFBQTtNQUFBO0lBQUE7SUFBQTs7OztJQUFBO0lBQUE7Ozs7O0lBTXZFO2dCQUFBOzs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtnQkFFQztJQUFvRTtNQUFBO01BQUE7SUFBQTtJQUFBOzs7O0lBQXBFO0lBRkQsU0FFQyxTQUZEOztJQUVxRTtJQUFBOzs7OztJQUovQztNQUN2QjtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXNDO0lBQ3JDO2dCQUFBOzs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBSU87SUFDSjs7OztJQUpGO0lBREQsU0FDQyxTQUREOzs7Ozs7O0lBVkY7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7Z0JBQUE7Ozs7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQTBDO0lBQStDO01BQ3hGO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBOEQ7TUFBQTtNQUFBO01BQUE7SUFBQTtJQUFBO2dCQUFBO0lBRXZEO0lBQ1A7Z0JBQUE7OztJQUFBO0tBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO0lBRUk7SUFDQztNQUNOO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFRYzs7OztJQWhCVDtJQUFxQztJQUExQyxTQUFLLFVBQXFDLFNBQTFDO0lBSUk7SUFBQTtJQUFILFVBQUcsbUJBQUg7OztJQUg4RDtJQUFBO0lBQUE7Ozs7O0lDRC9EO2dCQUFBOzs7Ozs7OzsifQ==
 //# sourceMappingURL=paragraph.component.ngfactory.js.map
 
 /***/ }),
@@ -4885,74 +4893,106 @@ var InfiniteScrollService = (function () {
     function InfiniteScrollService() {
         this.forceScroll = false;
     }
+    InfiniteScrollService.prototype.getChildPositionData = function (elements) {
+        var holderEl = window.document.createElement("div");
+        window.document.body.appendChild(holderEl);
+        var positionDataArr = [];
+        var previousSiblingsHeight = 0;
+        elements
+            .forEach(function (element) {
+            holderEl.appendChild(element);
+            var height = element.scrollHeight;
+            positionDataArr.push({ element: element, height: height, previousSiblingsHeight: previousSiblingsHeight });
+            previousSiblingsHeight += height;
+        });
+        holderEl.remove();
+        return positionDataArr;
+    };
     InfiniteScrollService.prototype.fillContainer = function (contentContainer, scrollContainer, children, focusIdx, focusPaddingTop) {
         if (focusIdx === void 0) { focusIdx = 0; }
         if (focusPaddingTop === void 0) { focusPaddingTop = 0; }
+        var childPositionData = this.getChildPositionData(children);
         // start with a clean slate
         this.emptyContainer(contentContainer);
         // put in the focused element first
-        var focusChild = this.getChildByIdx(children, focusIdx);
+        var focusChild = this.getChildByIdx(childPositionData, focusIdx);
         contentContainer.appendChild(focusChild);
         // add enough children before the focused element fill focusPaddingTop
         var firstChildIdx = focusIdx;
-        while (firstChildIdx >= 0 && focusChild.offsetTop < focusPaddingTop + BUFFER_PADDING) {
+        while (firstChildIdx >= focusIdx - 10) {
             firstChildIdx--;
-            contentContainer.insertBefore(this.getChildByIdx(children, firstChildIdx), this.getChildByIdx(children, firstChildIdx + 1));
+            contentContainer.insertBefore(this.getChildByIdx(childPositionData, firstChildIdx), this.getChildByIdx(childPositionData, firstChildIdx + 1));
         }
         // add enough children below fill container
-        var containerBottom = contentContainer.getBoundingClientRect().bottom;
         var lastChildIdx = focusIdx;
-        while (lastChildIdx < Object.keys(children).length - 1 &&
-            contentContainer.lastElementChild.getBoundingClientRect().top < containerBottom + BUFFER_PADDING) {
+        while (lastChildIdx <= focusIdx + 10) {
             lastChildIdx++;
-            contentContainer.appendChild(this.getChildByIdx(children, lastChildIdx));
+            contentContainer.appendChild(this.getChildByIdx(childPositionData, lastChildIdx));
         }
+        var topPaddingDiv = window.document.createElement("div");
+        topPaddingDiv.style.height = childPositionData[firstChildIdx].previousSiblingsHeight + "px";
+        contentContainer.insertBefore(topPaddingDiv, contentContainer.firstChild);
+        var bottomPaddingDiv = window.document.createElement("div");
+        var bottomPadding = this.getPaddingAfterChild(childPositionData, lastChildIdx);
+        bottomPaddingDiv.style.height = bottomPadding + "px";
+        contentContainer.appendChild(bottomPaddingDiv);
         // adjust container scroll to match focusPaddingTop
         scrollContainer.scrollTop = focusChild.offsetTop - focusPaddingTop;
         // return the bounds
         return { firstChildIdx: firstChildIdx, lastChildIdx: lastChildIdx };
     };
     InfiniteScrollService.prototype.updateContainerBuffers = function (contentContainer, scrollContainer, children, focusIdx, bounds) {
+        // if (this.forceScroll) {
+        // 	this.forceScroll = false;
+        // 	return bounds;
+        // }
         if (focusIdx === void 0) { focusIdx = 0; }
-        if (this.forceScroll) {
-            this.forceScroll = false;
-            return bounds;
-        }
-        // get scroll container top & bottom
-        var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom, scrollDepthReference = this.getScrollDepthReference(contentContainer, scrollContainer);
-        var newBounds = this.updateBounds(bounds, 0, 0);
-        // trim top while necessary
-        while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
-            contentContainer.firstElementChild.getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING) {
-            console.log("trimming top");
-            this.removeFirstChild(contentContainer);
-            newBounds = this.updateBounds(newBounds, 1, 0);
-        }
-        // trim bottom while necessary
-        while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
-            contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING) {
-            console.log("trimming bottom");
-            this.removeLastChild(contentContainer);
-            newBounds = this.updateBounds(newBounds, 0, -1);
-        }
-        // pad top while necessary
-        while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
-            newBounds.firstChildIdx > 0 &&
-            contentContainer.firstElementChild.getBoundingClientRect().top > scrollContainerTop - BUFFER_PADDING) {
-            console.log("padding top");
-            contentContainer.insertBefore(this.getChildByIdx(children, [newBounds.firstChildIdx - 1]), contentContainer.firstChild);
-            newBounds = this.updateBounds(newBounds, -1, 0);
-        }
-        // pad bottom while necessary
-        while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
-            newBounds.lastChildIdx < Object.keys(children).length - 1 &&
-            contentContainer.lastElementChild.getBoundingClientRect().bottom < scrollContainerBottom + BUFFER_PADDING) {
-            console.log("padding bottom");
-            contentContainer.appendChild(this.getChildByIdx(children, [newBounds.lastChildIdx + 1]));
-            newBounds = this.updateBounds(newBounds, 0, 1);
-        }
-        this.setScrollDepthByReference(scrollContainer, scrollDepthReference);
-        return newBounds;
+        // // get scroll container top & bottom
+        // const scrollContainerRect: ClientRect = scrollContainer.getBoundingClientRect(),
+        // 	scrollContainerTop = scrollContainerRect.top,
+        // 	scrollContainerBottom = scrollContainerRect.bottom,
+        // 	scrollDepthReference = this.getScrollDepthReference(contentContainer, scrollContainer);
+        // let newBounds = this.updateBounds(bounds, 0, 0);
+        // // trim top while necessary
+        // while (
+        // 	withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
+        // 	contentContainer.firstElementChild.getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING
+        // ) {
+        // 	console.log("trimming top");
+        // 	this.removeFirstChild(contentContainer);
+        // 	newBounds = this.updateBounds(newBounds, 1, 0);
+        // }
+        // // trim bottom while necessary
+        // while (
+        // 	withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
+        // 	contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING
+        // ) {
+        // 	console.log("trimming bottom");
+        // 	this.removeLastChild(contentContainer);
+        // 	newBounds = this.updateBounds(newBounds, 0, -1);
+        // }
+        // // pad top while necessary
+        // while (
+        // 	withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
+        // 	newBounds.firstChildIdx > 0 &&
+        // 	contentContainer.firstElementChild.getBoundingClientRect().top > scrollContainerTop - BUFFER_PADDING
+        // ) {
+        // 	console.log("padding top");
+        // 	contentContainer.insertBefore(this.getChildByIdx(children, [newBounds.firstChildIdx - 1]), contentContainer.firstChild);
+        // 	newBounds = this.updateBounds(newBounds, -1, 0);
+        // }
+        // // pad bottom while necessary
+        // while (
+        // 	withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
+        // 	newBounds.lastChildIdx < Object.keys(children).length - 1 &&
+        // 	contentContainer.lastElementChild.getBoundingClientRect().bottom < scrollContainerBottom + BUFFER_PADDING
+        // ) {
+        // 	console.log("padding bottom");
+        // 	contentContainer.appendChild(this.getChildByIdx(children, [newBounds.lastChildIdx + 1]));
+        // 	newBounds = this.updateBounds(newBounds, 0, 1);
+        // }
+        // this.setScrollDepthByReference(scrollContainer, scrollDepthReference);
+        return bounds;
     };
     InfiniteScrollService.prototype.emptyContainer = function (container) {
         while (!!container.children.length) {
@@ -4972,13 +5012,6 @@ var InfiniteScrollService = (function () {
         return { element: element, scrollTop: scrollContainer.scrollTop, offsetTop: element.offsetTop };
     };
     InfiniteScrollService.prototype.setScrollDepthByReference = function (scrollContainer, reference) {
-        console.log({
-            oldScroll: reference.scrollTop,
-            newScroll: scrollContainer.scrollTop,
-            oldOffset: reference.offsetTop,
-            newOffset: reference.element.offsetTop,
-            difference: (reference.scrollTop - reference.offsetTop) - (scrollContainer.scrollTop - reference.element.offsetTop)
-        });
         var difference = (scrollContainer.scrollTop - reference.element.offsetTop) - (reference.scrollTop - reference.offsetTop);
         if (difference === 0) {
             return;
@@ -4992,8 +5025,13 @@ var InfiniteScrollService = (function () {
     InfiniteScrollService.prototype.removeLastChild = function (container) {
         container.removeChild(container.lastElementChild);
     };
+    InfiniteScrollService.prototype.getPaddingAfterChild = function (children, idx) {
+        var lastChild = children[children.length - 1];
+        return (lastChild.height + lastChild.previousSiblingsHeight)
+            - (children[idx].height + children[idx].previousSiblingsHeight);
+    };
     InfiniteScrollService.prototype.getChildByIdx = function (children, idx) {
-        return children["" + idx];
+        return children[idx].element;
     };
     InfiniteScrollService.prototype.updateBounds = function (current, incrementFirst, incrementLast) {
         return {
@@ -5448,7 +5486,7 @@ var FullTextViewComponent = (function () {
             this.subscribeToInputs();
             return;
         }
-        this.contentBounds = this.scrollService.fillContainer(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.paragraphElements, this.bookPosition.paragraphIdx, 100);
+        this.contentBounds = this.scrollService.fillContainer(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.paragraphs.toArray().map(function (el) { return el.innerElementRef.nativeElement; }), this.bookPosition.paragraphIdx, 100);
     };
     FullTextViewComponent.prototype.updateContainerContent = function () {
         this.contentBounds = this.scrollService.updateContainerBuffers(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.paragraphElements, this.bookPosition.paragraphIdx, this.contentBounds);
