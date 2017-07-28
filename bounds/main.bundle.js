@@ -4951,12 +4951,14 @@ var InfiniteScrollService = (function () {
             this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect().bottom < BUFFER_PADDING * -1) {
             console.log("trimming top", this.getChildByIdx(childPositionData, newBounds.firstChildIdx), this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect());
             newBounds = this.removeFirstChild(childPositionData, newBounds);
+            this.updatePaddingDivs(childPositionData, newBounds);
         }
         // trim bottom while necessary
         while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
             contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING) {
             console.log("trimming bottom");
             newBounds = this.removeLastChild(childPositionData, newBounds);
+            this.updatePaddingDivs(childPositionData, newBounds);
         }
         // pad top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
@@ -4965,6 +4967,7 @@ var InfiniteScrollService = (function () {
             console.log("padding top");
             contentContainer.insertBefore(this.getChildByIdx(childPositionData, newBounds.firstChildIdx - 1), this.getChildByIdx(childPositionData, newBounds.firstChildIdx));
             newBounds = this.updateBounds(newBounds, -1, 0);
+            this.updatePaddingDivs(childPositionData, newBounds);
         }
         // // pad bottom while necessary
         while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
@@ -4973,11 +4976,8 @@ var InfiniteScrollService = (function () {
             console.log("padding bottom");
             contentContainer.insertBefore(this.getChildByIdx(childPositionData, [newBounds.lastChildIdx + 1]), window.document.querySelector("#bottomPaddingDiv"));
             newBounds = this.updateBounds(newBounds, 0, 1);
+            this.updatePaddingDivs(childPositionData, newBounds);
         }
-        var topPaddingDiv = window.document.querySelector("#topPaddingDiv");
-        topPaddingDiv.style.height = childPositionData[newBounds.firstChildIdx].previousSiblingsHeight + "px";
-        var bottomPaddingDiv = window.document.querySelector("#bottomPaddingDiv");
-        bottomPaddingDiv.style.height = this.getPaddingAfterChild(childPositionData, newBounds.lastChildIdx);
         return newBounds;
     };
     InfiniteScrollService.prototype.emptyContainer = function (container) {
@@ -4992,6 +4992,12 @@ var InfiniteScrollService = (function () {
     InfiniteScrollService.prototype.removeLastChild = function (childPositionData, bounds) {
         this.getChildByIdx(childPositionData, bounds.lastChildIdx).remove();
         return this.updateBounds(bounds, 0, -1);
+    };
+    InfiniteScrollService.prototype.updatePaddingDivs = function (childPositionData, bounds) {
+        var topPaddingDiv = window.document.querySelector("#topPaddingDiv");
+        var bottomPaddingDiv = window.document.querySelector("#bottomPaddingDiv");
+        topPaddingDiv.style.height = childPositionData[bounds.firstChildIdx].previousSiblingsHeight + "px";
+        bottomPaddingDiv.style.height = this.getPaddingAfterChild(childPositionData, bounds.lastChildIdx);
     };
     InfiniteScrollService.prototype.getPaddingAfterChild = function (children, idx) {
         var lastChild = children[children.length - 1], padding = (lastChild.height + lastChild.previousSiblingsHeight)
