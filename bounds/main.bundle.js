@@ -4908,10 +4908,9 @@ var InfiniteScrollService = (function () {
         holderEl.remove();
         return positionDataArr;
     };
-    InfiniteScrollService.prototype.fillContainer = function (contentContainer, scrollContainer, children, focusIdx, focusPaddingTop) {
+    InfiniteScrollService.prototype.fillContainer = function (contentContainer, scrollContainer, childPositionData, focusIdx, focusPaddingTop) {
         if (focusIdx === void 0) { focusIdx = 0; }
         if (focusPaddingTop === void 0) { focusPaddingTop = 0; }
-        var childPositionData = this.getChildPositionData(children);
         // start with a clean slate
         this.emptyContainer(contentContainer);
         // put in the focused element first
@@ -4931,9 +4930,11 @@ var InfiniteScrollService = (function () {
         }
         var topPaddingDiv = window.document.createElement("div");
         topPaddingDiv.style.height = childPositionData[firstChildIdx].previousSiblingsHeight + "px";
-        contentContainer.insertBefore(topPaddingDiv, contentContainer.firstChild);
+        topPaddingDiv.id = "topPaddingDiv";
+        contentContainer.insertBefore(topPaddingDiv, this.getChildByIdx(childPositionData, firstChildIdx));
         var bottomPaddingDiv = window.document.createElement("div");
         var bottomPadding = this.getPaddingAfterChild(childPositionData, lastChildIdx);
+        bottomPaddingDiv.id = "bottomPaddingDiv";
         bottomPaddingDiv.style.height = bottomPadding + "px";
         contentContainer.appendChild(bottomPaddingDiv);
         // adjust container scroll to match focusPaddingTop
@@ -4941,62 +4942,48 @@ var InfiniteScrollService = (function () {
         // return the bounds
         return { firstChildIdx: firstChildIdx, lastChildIdx: lastChildIdx };
     };
-    InfiniteScrollService.prototype.updateContainerBuffers = function (contentContainer, scrollContainer, children, focusIdx, bounds) {
-        // if (this.forceScroll) {
-        // 	this.forceScroll = false;
-        // 	return bounds;
-        // }
+    InfiniteScrollService.prototype.updateContainerBuffers = function (contentContainer, scrollContainer, childPositionData, focusIdx, bounds) {
         if (focusIdx === void 0) { focusIdx = 0; }
         // // get scroll container top & bottom
-        // const scrollContainerRect: ClientRect = scrollContainer.getBoundingClientRect(),
-        // 	scrollContainerTop = scrollContainerRect.top,
-        // 	scrollContainerBottom = scrollContainerRect.bottom,
-        // 	scrollDepthReference = this.getScrollDepthReference(contentContainer, scrollContainer);
-        // let newBounds = this.updateBounds(bounds, 0, 0);
-        // // trim top while necessary
-        // while (
-        // 	withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
-        // 	contentContainer.firstElementChild.getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING
-        // ) {
-        // 	console.log("trimming top");
-        // 	this.removeFirstChild(contentContainer);
-        // 	newBounds = this.updateBounds(newBounds, 1, 0);
-        // }
-        // // trim bottom while necessary
-        // while (
-        // 	withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
-        // 	contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING
-        // ) {
-        // 	console.log("trimming bottom");
-        // 	this.removeLastChild(contentContainer);
-        // 	newBounds = this.updateBounds(newBounds, 0, -1);
-        // }
-        // // pad top while necessary
-        // while (
-        // 	withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
-        // 	newBounds.firstChildIdx > 0 &&
-        // 	contentContainer.firstElementChild.getBoundingClientRect().top > scrollContainerTop - BUFFER_PADDING
-        // ) {
-        // 	console.log("padding top");
-        // 	contentContainer.insertBefore(this.getChildByIdx(children, [newBounds.firstChildIdx - 1]), contentContainer.firstChild);
-        // 	newBounds = this.updateBounds(newBounds, -1, 0);
-        // }
+        var scrollContainerRect = scrollContainer.getBoundingClientRect(), scrollContainerTop = scrollContainerRect.top, scrollContainerBottom = scrollContainerRect.bottom;
+        var newBounds = this.updateBounds(bounds, 0, 0);
+        // trim top while necessary
+        while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
+            this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING) {
+            console.log("trimming top");
+            newBounds = this.removeFirstChild(childPositionData, newBounds);
+        }
+        // trim bottom while necessary
+        while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
+            contentContainer.lastElementChild.getBoundingClientRect().top > scrollContainerBottom + BUFFER_PADDING) {
+            console.log("trimming bottom");
+            newBounds = this.removeLastChild(childPositionData, newBounds);
+        }
+        // pad top while necessary
+        while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
+            newBounds.firstChildIdx > 0 &&
+            this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect().top > scrollContainerTop - BUFFER_PADDING) {
+            console.log("padding top");
+            contentContainer.insertBefore(this.getChildByIdx(childPositionData, newBounds.firstChildIdx - 1), this.getChildByIdx(childPositionData, newBounds.firstChildIdx));
+            newBounds = this.updateBounds(newBounds, -1, 0);
+        }
         // // pad bottom while necessary
-        // while (
-        // 	withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
-        // 	newBounds.lastChildIdx < Object.keys(children).length - 1 &&
-        // 	contentContainer.lastElementChild.getBoundingClientRect().bottom < scrollContainerBottom + BUFFER_PADDING
-        // ) {
-        // 	console.log("padding bottom");
-        // 	contentContainer.appendChild(this.getChildByIdx(children, [newBounds.lastChildIdx + 1]));
-        // 	newBounds = this.updateBounds(newBounds, 0, 1);
-        // }
-        // this.setScrollDepthByReference(scrollContainer, scrollDepthReference);
-        return bounds;
+        while (withinLoopLimit(bounds.lastChildIdx, newBounds.lastChildIdx) &&
+            newBounds.lastChildIdx < childPositionData.length - 1 &&
+            this.getChildByIdx(childPositionData, newBounds.lastChildIdx).getBoundingClientRect().bottom < scrollContainerBottom + BUFFER_PADDING) {
+            console.log("padding bottom");
+            contentContainer.insertBefore(this.getChildByIdx(childPositionData, [newBounds.lastChildIdx + 1]), window.document.querySelector("#bottomPaddingDiv"));
+            newBounds = this.updateBounds(newBounds, 0, 1);
+        }
+        var topPaddingDiv = window.document.querySelector("#topPaddingDiv");
+        topPaddingDiv.style.height = childPositionData[newBounds.firstChildIdx].previousSiblingsHeight + "px";
+        var bottomPaddingDiv = window.document.querySelector("#bottomPaddingDiv");
+        bottomPaddingDiv.style.height = this.getPaddingAfterChild(childPositionData, newBounds.lastChildIdx);
+        return newBounds;
     };
     InfiniteScrollService.prototype.emptyContainer = function (container) {
         while (!!container.children.length) {
-            this.removeFirstChild(container);
+            container.firstElementChild.remove();
         }
     };
     InfiniteScrollService.prototype.getScrollDepthReference = function (contentContainer, scrollContainer) {
@@ -5019,16 +5006,18 @@ var InfiniteScrollService = (function () {
         scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
         this.forceScroll = true;
     };
-    InfiniteScrollService.prototype.removeFirstChild = function (container) {
-        container.removeChild(container.firstElementChild);
+    InfiniteScrollService.prototype.removeFirstChild = function (childPositionData, bounds) {
+        this.getChildByIdx(childPositionData, bounds.firstChildIdx).remove();
+        return this.updateBounds(bounds, 1, 0);
     };
-    InfiniteScrollService.prototype.removeLastChild = function (container) {
-        container.removeChild(container.lastElementChild);
+    InfiniteScrollService.prototype.removeLastChild = function (childPositionData, bounds) {
+        this.getChildByIdx(childPositionData, bounds.lastChildIdx).remove();
+        return this.updateBounds(bounds, 0, -1);
     };
     InfiniteScrollService.prototype.getPaddingAfterChild = function (children, idx) {
-        var lastChild = children[children.length - 1];
-        return (lastChild.height + lastChild.previousSiblingsHeight)
+        var lastChild = children[children.length - 1], padding = (lastChild.height + lastChild.previousSiblingsHeight)
             - (children[idx].height + children[idx].previousSiblingsHeight);
+        return padding + "px";
     };
     InfiniteScrollService.prototype.getChildByIdx = function (children, idx) {
         return children[idx].element;
@@ -5486,10 +5475,12 @@ var FullTextViewComponent = (function () {
             this.subscribeToInputs();
             return;
         }
-        this.contentBounds = this.scrollService.fillContainer(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.paragraphs.toArray().map(function (el) { return el.innerElementRef.nativeElement; }), this.bookPosition.paragraphIdx, 100);
+        this.childPositionData =
+            this.scrollService.getChildPositionData(this.paragraphs.toArray().map(function (el) { return el.innerElementRef.nativeElement; }));
+        this.contentBounds = this.scrollService.fillContainer(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.childPositionData, this.bookPosition.paragraphIdx, 100);
     };
     FullTextViewComponent.prototype.updateContainerContent = function () {
-        this.contentBounds = this.scrollService.updateContainerBuffers(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.paragraphElements, this.bookPosition.paragraphIdx, this.contentBounds);
+        this.contentBounds = this.scrollService.updateContainerBuffers(this.contentContainer.nativeElement, this.elementRef.nativeElement, this.childPositionData, this.bookPosition.paragraphIdx, this.contentBounds);
     };
     FullTextViewComponent.ctorParameters = function () { return [{ type: __WEBPACK_IMPORTED_MODULE_3__services__["c" /* BookPositionService */] }, { type: __WEBPACK_IMPORTED_MODULE_3__services__["d" /* InfiniteScrollService */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* NgZone */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* ElementRef */] }, { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DOCUMENT */]] }] }]; };
     return FullTextViewComponent;
@@ -5812,6 +5803,7 @@ var LocalStorageService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__infinite_scroll_service__ = __webpack_require__(58);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__infinite_scroll_service__["a"]; });
 /* unused harmony reexport ContentChildrenBounds */
+/* unused harmony reexport PositionData */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interval_service__ = __webpack_require__(59);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__interval_service__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__paragraph_parser_service__ = __webpack_require__(151);
