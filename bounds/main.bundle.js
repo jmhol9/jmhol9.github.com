@@ -4887,7 +4887,7 @@ module.exports = __webpack_require__(208);
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfiniteScrollService; });
-var BUFFER_PADDING = 500, MIN_PADDING = 10, MAX_LOOPS = 5;
+var BUFFER_PADDING = 1000, MIN_PADDING = 10, MAX_LOOPS = 5;
 var withinLoopLimit = function (newIdx, oldIdx) { return Math.abs(newIdx - oldIdx) <= MAX_LOOPS; };
 var InfiniteScrollService = (function () {
     function InfiniteScrollService() {
