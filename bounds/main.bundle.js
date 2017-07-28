@@ -4891,7 +4891,6 @@ var BUFFER_PADDING = 500, MIN_PADDING = 10, MAX_LOOPS = 5;
 var withinLoopLimit = function (newIdx, oldIdx) { return Math.abs(newIdx - oldIdx) <= MAX_LOOPS; };
 var InfiniteScrollService = (function () {
     function InfiniteScrollService() {
-        this.forceScroll = false;
     }
     InfiniteScrollService.prototype.getChildPositionData = function (elements) {
         var holderEl = window.document.createElement("div");
@@ -4950,7 +4949,7 @@ var InfiniteScrollService = (function () {
         // trim top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
             this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect().bottom < BUFFER_PADDING * -1) {
-            console.log("trimming top");
+            console.log("trimming top", this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect());
             newBounds = this.removeFirstChild(childPositionData, newBounds);
         }
         // trim bottom while necessary
@@ -4986,26 +4985,6 @@ var InfiniteScrollService = (function () {
             container.firstElementChild.remove();
         }
     };
-    InfiniteScrollService.prototype.getScrollDepthReference = function (contentContainer, scrollContainer) {
-        // reference el is first contentContainer child currently visible (ergo, won't be removed).
-        var element = Array.from(contentContainer.children)
-            .find(function (el) {
-            var boundingRect = el.getBoundingClientRect();
-            return Math.max(boundingRect.top, boundingRect.bottom) > 0;
-        });
-        if (element == null) {
-            throw new Error("Cannot get scrollDepthReference, no element in view");
-        }
-        return { element: element, scrollTop: scrollContainer.scrollTop, offsetTop: element.offsetTop };
-    };
-    InfiniteScrollService.prototype.setScrollDepthByReference = function (scrollContainer, reference) {
-        var difference = (scrollContainer.scrollTop - reference.element.offsetTop) - (reference.scrollTop - reference.offsetTop);
-        if (difference === 0) {
-            return;
-        }
-        scrollContainer.scrollTop = scrollContainer.scrollTop + difference;
-        this.forceScroll = true;
-    };
     InfiniteScrollService.prototype.removeFirstChild = function (childPositionData, bounds) {
         this.getChildByIdx(childPositionData, bounds.firstChildIdx).remove();
         return this.updateBounds(bounds, 1, 0);
@@ -5027,12 +5006,6 @@ var InfiniteScrollService = (function () {
             firstChildIdx: current.firstChildIdx + incrementFirst,
             lastChildIdx: current.lastChildIdx + incrementLast
         };
-    };
-    InfiniteScrollService.prototype.ensureScrollBuffer = function (scrollContainer) {
-        // hack to make sure it's always possible to scroll up
-        if (scrollContainer.scrollTop < BUFFER_PADDING / 2) {
-            scrollContainer.scrollTop = BUFFER_PADDING / 2;
-        }
     };
     return InfiniteScrollService;
 }());
