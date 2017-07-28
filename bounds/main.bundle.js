@@ -4949,7 +4949,7 @@ var InfiniteScrollService = (function () {
         var newBounds = this.updateBounds(bounds, 0, 0);
         // trim top while necessary
         while (withinLoopLimit(bounds.firstChildIdx, newBounds.firstChildIdx) &&
-            this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect().bottom < scrollContainerTop - BUFFER_PADDING) {
+            this.getChildByIdx(childPositionData, newBounds.firstChildIdx).getBoundingClientRect().bottom < BUFFER_PADDING * -1) {
             console.log("trimming top");
             newBounds = this.removeFirstChild(childPositionData, newBounds);
         }
